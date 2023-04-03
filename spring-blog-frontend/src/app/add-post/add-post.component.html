@@ -1,0 +1,21 @@
+<div class="add-post-content">
+    <div class="container">
+        <div>
+            <h3 class="new-post-title">Create New Post</h3>
+        </div>
+        <hr>
+        <form [formGroup]="addPostForm" (ngSubmit)="addPost()">
+            <div class="mb-3">
+                <label class="post-title form-label">Title</label>
+                <input type="text" [formControlName]="'title'" class="form-control" placeholder="Title">
+            </div>
+            <div class="mb-3">
+                <label class="post-content form-label">Body</label>
+                <editor [init]="{plugins: 'link'}" [formControlName]="'body'"></editor>
+            </div>
+            <div class="mb-3">
+                <button type="submit" class="btn btn-primary">Post</button>
+            </div>
+        </form>
+    </div>
+</div>

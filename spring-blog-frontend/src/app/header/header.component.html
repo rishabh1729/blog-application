@@ -1,0 +1,20 @@
+<div class="header">
+    <div class="container">
+        <div class="row">
+            <!-- Title -->
+            <div class="col-md-9">
+                <h1><a href="" class="title">Spring blog</a></h1>
+            </div>
+            <!-- Logout and Add Post -->
+            <div class="col-md-3" *ngIf="isAuthenticated">
+                <button class="logout btn btn-default" (click)="logout()">Logout</button>
+                <a href="/add-post" class="new-post btn btn-default">Add Post</a>
+            </div>
+            <!-- Login and Register -->
+            <div class="col-md-3" *ngIf="!isAuthenticated">
+                <a href="/login" class="login btn btn-default">Login</a>
+                <a href="/register" class="register btn btn-default">Register</a>
+            </div>
+        </div>
+    </div>
+</div>
